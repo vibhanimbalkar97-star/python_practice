@@ -1,89 +1,148 @@
-# n = int(input("Enter num:- "))
+""" for loops examples"""
 
-# for i in range(n):
-#     print("hello world")
+""" Numbers questions """
 
+# n = int(input("Enter a number:- "))
+
+# 1. Print numbers 1 to n
 # for i in range(1, n+1):
 #     print(i)
 
+# 2. Print numbers in reverse e.g. 50 to 1.
 # for i in range(n, 0, -1):
 #     print(i)
 
-# sum=0;
+# 3.Print all even numbers.
+# for i in range(1, n+1):
+#     if(i%2==0):
+#         print(i)
 
-# for i in range(1,n+1):
-#     sum = sum + i;
+# Print all odd numbers from 1 to 100.
+# for i in range(1, n+1):
+#     if(i%2 != 0):
+#         print(i)
 
+# Find the sum of numbers from 1 to 50.
+# sum = 0
+# for i in range(1, n+1):
+#     sum = sum + i
 # print(sum)
 
+# Print the multiplication table of any number.
+# for i in range(n, n*10+1, n):
+#     print(i)
+
+# for i in range(1, 11):
+#     print(f"{n} * {i} = {n * i}")
+
+# Find the factorial of a number.
 # fact = 1
 # for i in range(1, n+1):
 #     fact = fact * i
 # print(fact)
 
-# even=0
-# odd=0
+# Accept an integer and Print hello world n times
+# for i in range(n):
+#     print("hello world")
 
+# Sum up to n terms
+# sum = 0
 # for i in range(1, n+1):
-#     if(i % 2 == 0):
+#     sum = sum + i
+# print(sum)
+
+# Factorial of a number
+# fact = 1
+# for i in range(1, n+1):
+#     fact = fact * i
+# print(fact)
+
+# Print the sum of all even & odd numbers in a range
+# separately
+# even = 0
+# odd = 0
+# for i in range(1, n+1):
+#     if i%2 == 0:
 #         even = even + i
 #     else:
 #         odd = odd + i
-# print(f"sum of even numbers: {even} and odd: {odd}")
+# print(f"{even} and {odd}")
 
-
+# Print all the factors of a number
 # for i in range(1, n+1):
-#     if(n % i == 0):
+#     if n%i == 0:
 #         print(i)
 
-# sum=0
-# for i in range(1,n):
-#     if(n%i==0):
-#         sum=sum + i
-# if(n == sum):
-#     print(f"{n} is perfect no")
-# else:
-#     print(f"{n} is not perfect no")
+# - Accept a number and check if it a perfect number or not.
+# count =0
+# for i in range(1, n):
+#     if n%i == 0:
+#         count = count + i
+# if count == n:
+#     print("perfect number")
+# else: 
+#     print("not perfect number")
+       
 
-# count=0
+# Check wether the number is prime or not
+# count = 0
 # for i in range(1, n+1):
-#     if(n%i == 0):
+#     if n%i == 0:
 #         count = count + 1
 # if count == 2:
-#     print(f"{n} is prime no.")
+#     print("prime number")
 # else:
-#     print(f"{n} is not prime no.")
+#     print("not a prime number")
 
-# a = "helle"
-# b=""
+""" strings questions"""
 
-# for i in range(len(a)-1,-1, -1):
-#     b = b + a[i]
-# print(b)
+n = input("Enter a string:- ")
 
-# a= "naman"
-# b=""
+# Count how many vowels are in a string.
+# count = 0
+# for i in n:
+#     if i.lower() in "aeiou":
+#         count = count + 1
+# print(count)
 
-# for i in range(len(a)-1, -1, -1):
-#     b = b + a[i]
-# if(b == a):
-#     print("Pallindrome")
+#  Print each character of a string
+# for i in n:
+#     print(i)
+
+# - Reverse a string without using in build functions.
+# print(n[: : -1])
+# rev = ""
+# for i in range(len(n)-1, -1, -1):
+#     rev = rev + n[i]
+# print(rev)
+
+# - Check string is Pallindrome or not
+# rev = ""
+# for i in range(len(n)-1, -1, -1):
+#     rev = rev + n[i]
+# if rev == n:
+#     print("pallindrome")
 # else:
-#     print("not Pallindrome")
+#     print("not a pallindrome")
 
-str1 = "P@#yn26at^&i5ve"
+# - Count all letters, digits, and special symbols from a given
+# string
+# Given: str1 = "P@#yn26at^&i5ve"
+# Expected Outcome:
+# Total counts of chars, digits, and symbols
+# Chars = 8
+# Digits = 3
+# Symbol = 4
+# digit = 0
+# char= 0
+# spchar= 0
 
-digit =0
-char=0
-s=0
+# for i in n:
+#     if i.isdigit():
+#         digit += 1
+#     elif i.isalpha():
+#         char += 1
+#     else:
+#         spchar += 1
+# print(f"{digit}, {char}, {spchar}")
 
-for i in str1:
-    if i.isdigit():
-        digit = digit + 1
-    elif i.isalpha():
-        char = char + 1
-    else:
-        s = s + 1
-print(digit, char,s)
-
-    
