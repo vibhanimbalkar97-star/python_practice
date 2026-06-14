@@ -96,7 +96,7 @@
 
 """ strings questions"""
 
-n = input("Enter a string:- ")
+# n = input("Enter a string:- ")
 
 # Count how many vowels are in a string.
 # count = 0
@@ -146,3 +146,54 @@ n = input("Enter a string:- ")
 #         spchar += 1
 # print(f"{digit}, {char}, {spchar}")
 
+"""while loop"""
+# Separate each digit of a number and print it on the new line
+# while n > 0:
+#     digit = n % 10
+#     n = n // 10
+#     print(digit)
+
+
+#  Accept a number and print its reverse 
+# n = int(input("Enter a number:- "))
+# rev = 0
+# while n > 0:
+#     digit = n % 10
+#     rev = rev * 10 + digit
+#     n = n//10
+# print(rev)
+
+#  Accept a number and check if it is a pallindromic number (If
+# number and its reverse are equal?
+# n = int(input("Enter a number:- "))
+# copy = n
+# rev = 0
+# while n > 0:
+#     digit = n % 10
+#     rev = rev * 10 + digit
+#     n = n // 10
+# if rev == copy:
+#     print("Pallindrome number")
+# else:
+#     print("Not a Pallindrome number")
+    
+#  Create a random number guessing game with python.
+# import random
+# num = random.randint(1, 10)
+# tries = 0
+
+# while True:
+#     guess = int(input("Enter the number between 1 to 10:- "))
+#     if num == guess:
+#         tries+=1
+#         print(f"You guessed right number in {tries} tries")
+#         break
+#     elif num > guess:
+#         print(f"Go little higher")
+#         tries+=1
+#     elif num < guess:
+#         print(f"Go little lower")
+#         tries+=1
+#     else:
+#         tries+=1
+#         print("sorry you are wrong")
