@@ -1,0 +1,21 @@
+list = 
+| Question               | Answer                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------- |
+| `sort()` vs `sorted()` | `sort()` modifies the original list; `sorted()` returns a new sorted list.            |
+| List slicing           | Extracts part of a list using `list[start:end:step]`.                                 |
+| List comprehension     | A concise way to create lists using `[expression for item in iterable if condition]`. |
+| Copy a list            | `copy()`, slicing (`[:]`), `list()`, or `copy.deepcopy()` for nested lists.           |
+| Check element exists   | Use the `in` operator.                                                                |
+| Concatenate lists      | Use `+` to create a new list or `extend()` to modify the existing one.                |
+| Question                  | Short Answer                                                                                                    |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| 31. Nested list           | A list containing other lists.                                                                                  |
+| 32. Flatten list          | Convert nested lists into a single list using loops or list comprehension.                                      |
+| 33. Multidimensional list | A list of lists used to represent tables or matrices.                                                           |
+| 34. Memory allocation     | Lists store references to objects; assigning one list to another shares the same underlying list unless copied. |
+| 35. Array vs List         | Lists are flexible and heterogeneous; arrays are homogeneous and more efficient for numerical data.             |
+| 36. Time complexity       | Index access: O(1), append: O(1), search: O(n), sort: O(n log n).                                               |
+| 37. List comprehension    | A concise and often faster way to create lists than using loops with `append()`.                                |
+| 38. Mutable vs Immutable  | Lists are mutable; strings, tuples, and numbers are immutable.                                                  |
+| 39. Unpacking             | Assign list elements to variables using `a, b = lst` or `*` for remaining elements.                             |
+| 40. `zip()`               | Combines multiple iterables element by element into tuples.                                                     |
