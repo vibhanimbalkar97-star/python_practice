@@ -19,3 +19,126 @@ list =
 | 38. Mutable vs Immutable  | Lists are mutable; strings, tuples, and numbers are immutable.                                                  |
 | 39. Unpacking             | Assign list elements to variables using `a, b = lst` or `*` for remaining elements.                             |
 | 40. `zip()`               | Combines multiple iterables element by element into tuples.                                                     |
+
+Coding Practice Questions
+Find the largest element in a list.
+Find the smallest element in a list.
+Remove duplicates from a list.
+Find the second largest number.
+Count occurrences of an element.
+Merge two sorted lists.
+Rotate a list by k positions.
+Find common elements between two lists.
+Split a list into even and odd numbers.
+Find the sum of all elements in a list.
+
+Remove all empty strings from a list.
+Find duplicates in a list.
+Convert a list into a dictionary.
+Find pairs with a given sum.
+Shuffle a list randomly.
+Generate a list of prime numbers.
+Find missing numbers in a sequence.
+Swap two elements in a list.
+Convert a list of strings to integers.
+Filter elements based on conditions.
+===========================================================================================
+tuple Questions
+Beginner Level (1–10)
+What is a tuple in Python?
+How do you create a tuple?
+What is the difference between a list and a tuple?
+How do you access elements in a tuple?
+How do negative indexes work in tuples?
+How do you find the length of a tuple?
+Can you modify a tuple? Why or why not?
+How do you iterate through a tuple?
+How do you check if an element exists in a tuple?
+How do you concatenate two tuples?
+
+
+Intermediate Level (11–20)
+How do you slice a tuple?
+How do you count occurrences of an element?
+How do you find the index of an element?
+How do you unpack a tuple?
+What is tuple packing and unpacking?
+What is the use of * (asterisk) in tuple unpacking?
+How do you convert a list into a tuple?
+How do you convert a tuple into a list?
+How do you create a tuple with one element?
+What happens if you forget the comma in a single-element tuple?
+
+📌 Quick Revision Table
+Q	Answer
+1	Tuple = ordered, immutable collection
+2	Create using ()
+3	List is mutable, tuple is immutable
+4	Access using indexing
+5	Negative indexing starts from the end
+6	len() gives the length
+7	Tuples cannot be modified
+8	Iterate using a for loop
+9	Use in to check existence
+10	Concatenate with +
+11	Slice using [start:end]
+12	Count with count()
+13	Find position with index()
+14	Unpack using a, b, c = t
+15	Packing combines values; unpacking separates them
+16	* collects remaining values during unpacking
+17	Convert list → tuple with tuple()
+18	Convert tuple → list with list()
+19	Single-element tuple needs a comma: (10,)
+20	Without the comma, (10) is an int
+
+
+Coding Questions (21–30)
+Find the largest element in a tuple.
+Find the smallest element in a tuple.
+Find the second largest element.
+Count the frequency of each element.
+Remove duplicates from a tuple.
+Reverse a tuple.
+Merge two tuples.
+Find common elements between two tuples.
+Find the sum of all elements.
+Find the average of all elements.
+Advanced Level (31–40)
+What are nested tuples?
+How do you access elements inside nested tuples?
+Explain tuple immutability.
+Why are tuples faster than lists?
+When should you use tuples instead of lists?
+Can a tuple contain mutable objects?
+Explain tuple hashing.
+Can tuples be used as dictionary keys? Why?
+What is the memory difference between a tuple and a list?
+Explain packing and unpacking with examples.
+
+
+Scenario-Based Questions (41–50)
+Swap two variables using tuples.
+Return multiple values from a function using a tuple.
+Find duplicate elements in a tuple.
+Remove duplicate elements while preserving order.
+Convert a tuple of strings to integers.
+Convert a tuple into a dictionary.
+Sort a tuple.
+Find missing numbers in a tuple.
+Rotate a tuple by k positions.
+Filter elements based on a condition.
+Tricky Interview Questions (51–60)
+Why are tuples immutable?
+Is an empty tuple truthy or falsy?
+Can a tuple contain a list?
+Can you modify a list inside a tuple?
+Difference between () and (1,)?
+Difference between tuple packing and tuple creation?
+What happens when you multiply a tuple?
+t = (1, 2)
+print(t * 3)
+Difference between tuple() and list()?
+Can a tuple contain another tuple?
+Why is a tuple more memory efficient than a list?
+==========================================================
