@@ -104,6 +104,19 @@ Merge two tuples.
 Find common elements between two tuples.
 Find the sum of all elements.
 Find the average of all elements.
+
+Question	Solution
+21	max() or loop
+22	min() or loop
+23	Track largest and second
+24	count() with a visited list, or use a dictionary
+25	Store unique values in a list, then convert to a tuple
+26	t[::-1] or tuple(reversed(t))
+27	Use + to concatenate tuples
+28	Loop through one tuple and check membership in the other
+29	sum() or accumulate with a loop
+30	sum / len or compute both with a loop
+
 Advanced Level (31–40)
 What are nested tuples?
 How do you access elements inside nested tuples?
@@ -128,6 +141,22 @@ Sort a tuple.
 Find missing numbers in a tuple.
 Rotate a tuple by k positions.
 Filter elements based on a condition.
+
+| Q  | Problem                     | Solution                               |
+| -- | --------------------------- | -------------------------------------- |
+| 51 | Swap variables              | `a, b = b, a`                          |
+| 52 | Return multiple values      | `return x, y`                          |
+| 53 | Find duplicates             | `count() > 1`                          |
+| 54 | Remove duplicates           | Use a `unique` list and preserve order |
+| 55 | Convert strings to integers | Loop + `int()`                         |
+| 56 | Tuple → Dictionary          | `dict()` or `zip()`                    |
+| 57 | Sort a tuple                | `tuple(sorted(t))`                     |
+| 58 | Find missing numbers        | Check numbers in the expected range    |
+| 59 | Rotate by `k`               | Slicing: `t[-k:] + t[:-k]`             |
+| 60 | Filter elements             | Loop with an `if` condition            |
+
+
+
 Tricky Interview Questions (51–60)
 Why are tuples immutable?
 Is an empty tuple truthy or falsy?
@@ -141,4 +170,28 @@ print(t * 3)
 Difference between tuple() and list()?
 Can a tuple contain another tuple?
 Why is a tuple more memory efficient than a list?
+
+| Q  | Answer                                                                       |
+| -- | ---------------------------------------------------------------------------- |
+| 31 | Nested tuple = tuple inside another tuple                                    |
+| 32 | Access with multiple indexes (`t[1][0]`)                                     |
+| 33 | Tuples are immutable                                                         |
+| 34 | Faster because immutable                                                     |
+| 35 | Use for fixed data                                                           |
+| 36 | Yes, tuples can contain mutable objects like lists                           |
+| 37 | Hashable only if all elements are immutable                                  |
+| 38 | Yes, immutable tuples can be dictionary keys                                 |
+| 39 | Tuples use less memory than lists                                            |
+| 40 | Packing combines values; unpacking separates them                            |
+| 51 | Immutable by design for safety and efficiency                                |
+| 52 | Empty tuple is falsy                                                         |
+| 53 | Yes, tuples can contain lists                                                |
+| 54 | You can modify the list inside a tuple, but not replace it through the tuple |
+| 55 | `()` is empty; `(1,)` is a one-element tuple                                 |
+| 56 | Packing (`1,2,3`) and tuple creation (`(1,2,3)`) create the same tuple       |
+| 57 | `*` repeats the tuple                                                        |
+| 58 | `tuple()` creates tuples; `list()` creates lists                             |
+| 59 | Yes, tuples can contain other tuples                                         |
+| 60 | Tuples are more memory efficient because they are immutable                  |
+
 ==========================================================

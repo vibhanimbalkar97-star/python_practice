@@ -150,9 +150,13 @@ lists = ["Apple", 20, 3.4, True]
 # Rotate means moving elements from one end of the list to the other.
 # numbers = [1, 2, 3, 4, 5]
 # rotate from right use -ve, left use +ve
+# If k = 2, rotate right by 2 positions. [-k:] , [:-k] [4, 5, 1, 2, 3]
+# asks for left rotation, [3,4,5,1,2] [k:] + [:k]
+
 # k = 2
 # rotated = numbers[2:] + numbers[:2]
 # print(rotated)
+
 # Find common elements between two lists.
 # list1 = [1, 2, 3, 4]
 # list2 = [3, 4, 5, 6]
