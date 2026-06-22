@@ -194,4 +194,178 @@ Why is a tuple more memory efficient than a list?
 | 59 | Yes, tuples can contain other tuples                                         |
 | 60 | Tuples are more memory efficient because they are immutable                  |
 
-==========================================================
+======================================================================================
+sets 
+
+1. What is a set in Python?
+2. How do you create a set?
+3. What is the difference between a set and a list?
+4. What is the difference between a set and a tuple?
+5. Can a set contain duplicate elements?
+6. Is a set ordered or unordered?
+7. Can you access elements using indexing?
+8. How do you add an element to a set?
+9. How do you add multiple elements?
+10. How do you remove an element?
+
+| Q  | Answer                                                              |
+| -- | ------------------------------------------------------------------- |
+| 1  | Set = unordered, mutable collection of unique elements              |
+| 2  | Create using `{}` or `set()`                                        |
+| 3  | List allows duplicates and indexing; set does not                   |
+| 4  | Set is mutable and unordered; tuple is immutable and ordered        |
+| 5  | No, sets automatically remove duplicates                            |
+| 6  | Sets are unordered                                                  |
+| 7  | No, sets don't support indexing                                     |
+| 8  | Add one element with `add()`                                        |
+| 9  | Add multiple elements with `update()`                               |
+| 10 | Remove elements with `remove()`, `discard()`, `pop()`, or `clear()` |
+
+{} creates a dictionary, not an empty set. To create an empty set, use:
+
+s = set()
+Use a set when:
+You need unique values.
+You want fast membership checks (x in s).
+You need operations like union, intersection, and difference.
+Remember:
+add() → One element.
+update() → Multiple elements.
+remove() → Raises KeyError if the element doesn't exist.
+discard() → Does nothing if the element doesn't exist.
+
+11. Difference between remove(), discard(), pop(), and clear()?
+12. How do you find the length of a set?
+13. How do you check if an element exists?
+14. How do you iterate through a set?
+15. Can a set contain mutable objects like lists?
+16. Can a set contain tuples?
+17. How do you create an empty set?
+18. Why does {} create a dictionary instead of a set?
+19. What is a frozen set (frozenset)?
+20. When should you use a set?
+
+| Q  | Answer                                                                                                                 |
+| -- | ---------------------------------------------------------------------------------------------------------------------- |
+| 11 | `remove()` → error if missing; `discard()` → no error; `pop()` → removes an arbitrary element; `clear()` → removes all |
+| 12 | `len()` returns the number of elements                                                                                 |
+| 13 | Use `in` to check existence                                                                                            |
+| 14 | Iterate with a `for` loop                                                                                              |
+| 15 | No, lists are mutable and unhashable                                                                                   |
+| 16 | Yes, tuples can be stored if all their elements are hashable                                                           |
+| 17 | Create an empty set with `set()`                                                                                       |
+| 18 | `{}` creates a dictionary, not a set                                                                                   |
+| 19 | `frozenset` is an immutable set                                                                                        |
+| 20 | Use sets for unique values, fast membership tests, and set operations                                                  |
+
+Set methods that modify the set: add(), update(), remove(), discard(), pop(), clear().
+Immutable objects like int, str, and tuples containing only immutable elements can be stored in sets.
+Mutable objects like list, dict, and set cannot be stored in a set because they are unhashable.
+frozenset is useful when you need the behavior of a set but the data should never change, or when you need to use a set as a dictionary key.
+
+21. What is the union of two sets?
+22. Difference between union() and |?
+23. What is the intersection of two sets?
+24. Difference between intersection() and &?
+25. What is the difference of two sets?
+26. Difference between difference() and -?
+27. What is the symmetric difference?
+28. Difference between symmetric_difference() and ^?
+29. How do you update a set?
+30. Difference between update() and add()?
+
+| Q  | Answer                                                                                         |
+| -- | ---------------------------------------------------------------------------------------------- |
+| 21 | Union = all unique elements from both sets                                                     |
+| 22 | `union()` and `\|` give the same result; `union()` also accepts other iterables                |
+| 23 | Intersection = common elements                                                                 |
+| 24 | `intersection()` and `&` give the same result; `intersection()` also accepts other iterables   |
+| 25 | Difference = elements in the first set but not the second                                      |
+| 26 | `difference()` and `-` give the same result; `difference()` also accepts other iterables       |
+| 27 | Symmetric difference = elements in either set but not both                                     |
+| 28 | `symmetric_difference()` and `^` give the same result; the method also accepts other iterables |
+| 29 | `update()` adds multiple elements to a set                                                     |
+| 30 | `add()` adds one element; `update()` adds multiple elements from an iterable                   |
+
+Union (|) → Everything from both sets.
+Intersection (&) → Only common elements.
+Difference (-) → Elements only in the first set.
+Symmetric Difference (^) → Elements in one set or the other, but not in both.
+
+31. What is intersection_update()?
+32. What is difference_update()?
+33. What is symmetric_difference_update()?
+34. What is issubset()?
+35. What is issuperset()?
+36. What is isdisjoint()?
+37. How do you convert a list to a set?
+38. How do you remove duplicates from a list using a set?
+39. How do you convert a set into a list?
+40. How do you sort a set?
+
+| Q  | Answer                                                                                        |
+| -- | --------------------------------------------------------------------------------------------- |
+| 31 | `intersection_update()` keeps only common elements and modifies the original set.             |
+| 32 | `difference_update()` removes elements found in the second set and modifies the original set. |
+| 33 | `symmetric_difference_update()` keeps only non-common elements and modifies the original set. |
+| 34 | `issubset()` checks if all elements of one set exist in another.                              |
+| 35 | `issuperset()` checks if one set contains all elements of another.                            |
+| 36 | `isdisjoint()` checks whether two sets have no common elements.                               |
+| 37 | Convert a list to a set using `set()`.                                                        |
+| 38 | Remove duplicates with `set()`, but remember it does not preserve order.                      |
+| 39 | Convert a set to a list using `list()`.                                                       |
+| 40 | Use `sorted()` to get a sorted list from a set.                                               |
+
+41. Find the union of two sets.
+42. Find the intersection of two sets.
+43. Find the difference between two sets.
+44. Find the symmetric difference.
+45. Check if one set is a subset of another.
+46. Check if one set is a superset of another.
+47. Check whether two sets are disjoint.
+48. Remove duplicate elements from a list using a set.
+49. Find common elements between two lists using sets.
+50. Find unique elements from two lists.
+51. Find elements present only in the first set.
+52. Find elements present only in the second set.
+53. Find the total number of unique elements from two lists.
+54. Find the missing elements between two sets.
+55. Check if two sets are equal.
+56. Find the maximum and minimum element in a set.
+57. Find the sum of all elements in a set.
+58. Filter even numbers from a set.
+59. Convert a list into a set and back into a list.
+60. Create a frozenset and explain why it is immutable.
+
+| Q  | Solution                                                         |
+| -- | ---------------------------------------------------------------- |
+| 48 | `list(set(list1))` removes duplicates                            |
+| 49 | `set(list1) & set(list2)` finds common elements                  |
+| 50 | `set(list1) ^ set(list2)` finds unique (non-common) elements     |
+| 51 | `a - b` gives elements only in the first set                     |
+| 52 | `b - a` gives elements only in the second set                    |
+| 53 | `len(set(list1).union(set(list2)))` counts total unique elements |
+| 54 | `a ^ b` finds elements present in only one of the two sets       |
+| 55 | `a == b` checks if two sets are equal                            |
+| 56 | `max(s)` and `min(s)` find the maximum and minimum values        |
+| 57 | `sum(s)` returns the sum of all elements                         |
+| 58 | Loop through the set and use `add()` to collect even numbers     |
+| 59 | `list(set(numbers))` converts a list to a set and back to a list |
+| 60 | `frozenset()` creates an immutable, hashable set                 |
+
+
+| Question                       | Answer                                                                                 |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Why are sets faster?           | They use a hash table for **O(1)** average lookup.                                     |
+| Why no duplicates?             | Sets store only unique values based on hashing and equality.                           |
+| Why no indexing?               | Sets are unordered.                                                                    |
+| Search complexity              | **O(1)** average, **O(n)** worst case.                                                 |
+| Can a set contain another set? | No, because sets are mutable and unhashable.                                           |
+| Why is `frozenset` hashable?   | It is immutable, so its hash value doesn't change.                                     |
+| `remove()` vs `discard()`      | `remove()` raises `KeyError` if the element is missing; `discard()` does nothing.      |
+| When use a set?                | For unique values, fast lookups, and set operations.                                   |
+| Why unordered?                 | Elements are stored by hash values, not by index.                                      |
+| What is hashing?               | A process that converts an object into a fixed hash value for fast storage and lookup. |
+
+===================================================================================================================================
+dictionary
