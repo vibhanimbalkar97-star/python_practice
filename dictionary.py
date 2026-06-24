@@ -281,9 +281,93 @@ d = {
 # lambda item: item[1] → "Take each (key, value) tuple and use its value as the sorting key."
 
 # 31. Create a dictionary from two lists
-# keys = ["name","age","city"]
+keys = ["name","age","city"]
 
-# values = ["Rahul",22,"Pune"]
+values = ["Rahul",22,"Pune"]
 
 # res = dict(zip(keys, values))
 # print(keys, res)
+
+# res = {}
+# for i in range(len(keys)):
+#     res[keys[i]] = values[i]
+#     print(keys[i], values[i])
+# print(res)
+
+# 32. Group words by first letter
+# words = ["apple", "ant", "bat", "ball", "cat"]
+# res = {}
+# for word in words:
+#     first = word[0]
+
+#     if first not in res:
+#         res[first] = []
+    
+#     res[first].append(word)
+# print(res)
+
+# 33. Invert a dictionary with duplicate values
+# d = {
+#     "a":1,
+#     "b":2,
+#     "c":1
+# }
+# res={}
+# for key, value in d.items():
+
+#     if value not in res:
+#         res[value] = []
+#     res[value].append(key)
+# print(res)
+
+# 34. Nested dictionary - Print every student's marks
+students = {
+    "A": {
+        "Math": 90,
+        "English": 80
+    },
+    "B": {
+        "Math": 70,
+        "English": 85
+    }
+}
+# for student, subjects in students.items():
+#     print(student)
+
+#     for subject, mark in subjects.items():
+#         print(subject, mark)
+
+# 35. Average marks of each student
+# total = 0
+# for student, subjects in students.items():
+#     total = 0
+#     for mark in subjects.values():
+#         total += mark
+#     average = total / len(subjects)
+#     print(student, average)
+    
+# 36. Student with highest total marks
+# highest_student=""
+# highest_total = 0
+
+# for student, subjects in students.items():
+#     total = sum(subjects.values())
+
+#     if total > highest_total:
+#         highest_total = total
+#         highest_student = student
+# print(highest_student, highest_total)
+
+# 37. Count occurrences of each word in a paragraph (ignore punctuation)
+# text = "Python is easy. Python is powerful!"
+# text = text.lower()
+# for ch in ".,!?":
+#     text=text.replace(ch,"")
+# words = text.split()
+# res = {}
+# for word in words:
+#     if word in res:
+#         res[word]+=1
+#     else:
+#         res[word]=1
+# print(res)
