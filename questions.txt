@@ -369,3 +369,263 @@ Symmetric Difference (^) → Elements in one set or the other, but not in both.
 
 ===================================================================================================================================
 dictionary
+A dictionary stores data as key-value pairs.
+Keys must be unique and hashable (immutable).
+Values can be duplicated and can be of any data type.
+Dictionary lookup, insertion, and deletion are O(1) on average because dictionaries use a hash table internally.
+Prefer get() when a key may be missing to avoid KeyError.
+Use items() when you need both keys and values while iterating.
+
+Beginner Theory Questions
+1. What is a dictionary in Python?
+2. Why is a dictionary called a mapping data type?
+3. How do you create an empty dictionary?
+4. How do you create a dictionary with values?
+5. What is the syntax of a dictionary?
+6. What is a key-value pair?
+7. Can dictionary keys be duplicated?
+8. Can dictionary values be duplicated?
+9. Are dictionaries ordered or unordered?
+10. Can a dictionary contain different data types?
+11. How do you access a value from a dictionary?
+12. What happens if you access a key that doesn't exist?
+13. What is the difference between dict[key] and dict.get(key)?
+14. How do you add a new key-value pair?
+15. How do you update an existing value?
+16. How do you remove a key from a dictionary?
+17. How do you remove all elements from a dictionary?
+18. How do you check whether a key exists?
+19. How do you find the length of a dictionary?
+20. How do you iterate over a dictionary?
+
+| **No.** | **Question**                                   | **Quick Answer**                                                            |
+| ------- | ---------------------------------------------- | --------------------------------------------------------------------------- |
+| 1       | What is a dictionary?                          | A mutable collection that stores data as **key-value pairs**.               |
+| 2       | Why is it called a mapping data type?          | Because it **maps a unique key to a value**.                                |
+| 3       | How to create an empty dictionary?             | `d = {}` or `d = dict()`                                                    |
+| 4       | How to create a dictionary?                    | Use `{}` with `key: value` pairs.                                           |
+| 5       | Dictionary syntax                              | `{key1: value1, key2: value2}`                                              |
+| 6       | What is a key-value pair?                      | A **key** identifies the data, and the **value** is the associated data.    |
+| 7       | Can keys be duplicated?                        | ❌ No. Duplicate keys overwrite the previous value.                          |
+| 8       | Can values be duplicated?                      | ✅ Yes. Multiple keys can have the same value.                               |
+| 9       | Are dictionaries ordered?                      | ✅ Yes, from **Python 3.7+**, they preserve insertion order.                 |
+| 10      | Can dictionaries contain different data types? | ✅ Yes. Values can be of any type, and keys can be different hashable types. |
+| 11      | How to access a value?                         | `d[key]` or `d.get(key)`                                                    |
+| 12      | What if a key doesn't exist?                   | `d[key]` → `KeyError`; `d.get(key)` → `None` (or a default value).          |
+| 13      | `d[key]` vs `d.get(key)`                       | `[]` raises `KeyError`; `get()` safely returns `None` or a default.         |
+| 14      | How to add a new key?                          | `d["age"] = 22`                                                             |
+| 15      | How to update a value?                         | Assign a new value to an existing key: `d["age"] = 23`                      |
+| 16      | How to remove a key?                           | `del d[key]` or `d.pop(key)`                                                |
+| 17      | How to remove all elements?                    | `d.clear()`                                                                 |
+| 18      | How to check if a key exists?                  | Use the `in` operator: `"age" in d`                                         |
+| 19      | How to find the length?                        | `len(d)` returns the number of key-value pairs.                             |
+| 20      | How to iterate over a dictionary?              | `for key in d`, `d.values()`, or `d.items()`                                |
+
+| Method     | Purpose                                   |
+| ---------- | ----------------------------------------- |
+| `get()`    | Safely get a value without `KeyError`.    |
+| `keys()`   | Returns all keys.                         |
+| `values()` | Returns all values.                       |
+| `items()`  | Returns `(key, value)` pairs.             |
+| `update()` | Adds or updates multiple key-value pairs. |
+| `pop()`    | Removes and returns a value by key.       |
+| `clear()`  | Removes all items.                        |
+| `copy()`   | Creates a shallow copy of the dictionary. |
+
+| Topic                          | Answer                              |
+| ------------------------------ | ----------------------------------- |
+| Dictionary stores              | **Key-value pairs**                 |
+| Keys                           | **Unique and hashable (immutable)** |
+| Values                         | **Can be duplicated and mutable**   |
+| Mutable or immutable?          | **Mutable**                         |
+| Ordered?                       | **Yes (Python 3.7+)**               |
+| Search complexity              | **O(1) average**                    |
+| Data structure used internally | **Hash table**                      |
+| Best way to avoid `KeyError`   | Use **`get()`**                     |
+| Number of items                | `len(dictionary)`                   |
+| Iterate over key-value pairs   | `for key, value in d.items():`      |
+
+30-Second Interview Revision
+Dictionary = Mutable mapping of key-value pairs.
+Keys must be unique and hashable (immutable types like str, int, tuple).
+Values can be duplicated and can be of any data type.
+Create using {} or dict().
+Access with d[key] or d.get(key).
+Add/update with d[key] = value.
+Remove using del, pop(), or clear().
+Check keys using in.
+Length using len(d).
+Iterate using keys(), values(), or items().
+Average lookup, insertion, and deletion time complexity is O(1) because dictionaries use a hash table internally.
+
+Intermediate Theory Questions
+21. What is the difference between keys(), values(), and items()?
+22. What does the update() method do?
+23. What is the use of the pop() method?
+24. What is the difference between pop() and popitem()?
+25. What does clear() do?
+26. What is the use of the copy() method?
+27. What is the difference between shallow copy and deep copy?
+28. What is dictionary comprehension?
+29. Write the syntax of dictionary comprehension.
+30. When should dictionary comprehension be used?
+31. Can a dictionary contain another dictionary?
+32. What is a nested dictionary?
+33. How do you access nested dictionary values?
+34. Can a dictionary contain a list?
+35. Can a list contain dictionaries?
+36. Can tuples be dictionary keys?
+37. Why can tuples be keys but lists cannot?
+38. Can sets be dictionary keys?
+39. Can dictionaries be dictionary keys?
+40. What types of objects can be dictionary keys?
+
+| No. | Answer                                                                                                     |
+| --- | ---------------------------------------------------------------------------------------------------------- |
+| 21  | `keys()` → keys, `values()` → values, `items()` → key-value pairs                                          |
+| 22  | `update()` adds or updates key-value pairs                                                                 |
+| 23  | `pop()` removes a specified key and returns its value                                                      |
+| 24  | `pop()` removes a given key; `popitem()` removes the last inserted key-value pair                          |
+| 25  | `clear()` removes all items from the dictionary                                                            |
+| 26  | `copy()` creates a shallow copy                                                                            |
+| 27  | Shallow copy shares nested objects; deep copy creates independent copies                                   |
+| 28  | Dictionary comprehension creates dictionaries in a concise way                                             |
+| 29  | Syntax: `{key: value for item in iterable}`                                                                |
+| 30  | Use it for creating or filtering dictionaries with less code                                               |
+| 31  | ✅ Yes, a dictionary can contain another dictionary                                                         |
+| 32  | A nested dictionary is a dictionary inside another dictionary                                              |
+| 33  | Access using multiple keys, e.g., `d["A"]["Math"]`                                                         |
+| 34  | ✅ Yes, dictionaries can contain lists                                                                      |
+| 35  | ✅ Yes, lists can contain dictionaries                                                                      |
+| 36  | ✅ Yes, tuples can be dictionary keys (if hashable)                                                         |
+| 37  | Tuples are immutable (hashable); lists are mutable (not hashable)                                          |
+| 38  | ❌ No, sets cannot be dictionary keys                                                                       |
+| 39  | ❌ No, dictionaries cannot be dictionary keys                                                               |
+| 40  | Valid keys: `int`, `float`, `str`, `bool`, `tuple` (hashable), `None`; Invalid keys: `list`, `set`, `dict` |
+
+
+Advanced Theory Questions
+41. Why must dictionary keys be immutable?
+42. What is hashing?
+43. How does hashing work in dictionaries?
+44. Why is dictionary lookup usually O(1)?
+45. What happens when two keys have the same hash value?
+46. What is a hash collision?
+47. How does Python resolve hash collisions?
+48. What is the average time complexity of:
+Search
+Insert
+Delete
+49. What is the worst-case time complexity of dictionary operations?
+50. Why are dictionaries faster than lists for searching?
+51. Why can't dictionaries be indexed like lists?
+52. Why don't dictionaries support slicing?
+53. What happens if duplicate keys are provided while creating a dictionary?
+54. What happens if duplicate values are provided?
+55. Is a dictionary mutable or immutable?
+56. Can you modify a dictionary while iterating over it?
+57. What error occurs when modifying a dictionary during iteration?
+58. What is fromkeys()?
+59. What does setdefault() do?
+60. What is the difference between get() and setdefault()?
+
+| No. | Answer                                                                                                       |
+| --- | ------------------------------------------------------------------------------------------------------------ |
+| 41  | Keys must be **immutable (hashable)** so their hash value remains constant.                                  |
+| 42  | Hashing converts an object into a fixed-size integer called a **hash value**.                                |
+| 43  | Python hashes the key and stores/looks up the value using a **hash table**.                                  |
+| 44  | Lookup is **O(1)** on average because Python jumps directly to the key's location using its hash.            |
+| 45  | If two keys have the same hash, Python compares the actual keys to find the correct one.                     |
+| 46  | A **hash collision** occurs when different keys produce the same hash value.                                 |
+| 47  | Python resolves collisions using **open addressing (probing)**.                                              |
+| 48  | Average time complexity: Search **O(1)**, Insert **O(1)**, Delete **O(1)**.                                  |
+| 49  | Worst-case time complexity is **O(n)**.                                                                      |
+| 50  | Dictionaries use hash tables (**O(1)**); lists search sequentially (**O(n)**).                               |
+| 51  | Dictionaries are accessed by **keys**, not numeric indexes.                                                  |
+| 52  | Dictionaries don't support slicing because they are designed for key-based, not index-based, access.         |
+| 53  | Duplicate keys are allowed, but the **last value overwrites** the previous one.                              |
+| 54  | Duplicate values are **allowed**.                                                                            |
+| 55  | Dictionaries are **mutable**.                                                                                |
+| 56  | **No**, don't add or remove keys while iterating over a dictionary.                                          |
+| 57  | Modifying a dictionary during iteration raises **`RuntimeError: dictionary changed size during iteration`**. |
+| 58  | `fromkeys()` creates a new dictionary from a sequence of keys with the same value.                           |
+| 59  | `setdefault()` returns an existing value or inserts the key with a default value if it's missing.            |
+| 60  | `get()` only retrieves a value; `setdefault()` may also **add the key** if it doesn't exist.                 |
+
+
+Interview Scenario Questions
+61. When would you use a dictionary instead of a list?
+62. When would you use a dictionary instead of a tuple?
+63. When would you use a dictionary instead of a set?
+64. Give three real-world examples where dictionaries are useful.
+65. How would you store student records using dictionaries?
+66. How would you store employee information?
+67. How would you implement a phone book using dictionaries?
+68. Why are dictionaries commonly used in JSON data?
+69. Explain the relationship between Python dictionaries and JSON objects.
+70. How are dictionaries used in APIs?
+79. How do you safely access a missing key without getting an error?
+80. Why is a dictionary one of the most frequently used data structures in Python?
+
+| No. | Answer                                                                                                                              |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 61  | Use a **dictionary** for key-value pairs and fast lookup; use a **list** for ordered data accessed by index.                        |
+| 62  | Use a **dictionary** for editable, named data; use a **tuple** for fixed, immutable data.                                           |
+| 63  | Use a **dictionary** when values are associated with keys; use a **set** for unique values only.                                    |
+| 64  | Examples: Student records, Phone book, Product inventory.                                                                           |
+| 65  | Store each student's details as key-value pairs, often using a nested dictionary.                                                   |
+| 66  | Store employee details like ID, name, department, and salary in a dictionary.                                                       |
+| 67  | Use names as keys and phone numbers as values for a phone book.                                                                     |
+| 68  | Dictionaries are used in JSON because both use **key-value pairs**.                                                                 |
+| 69  | JSON objects map directly to Python dictionaries using the `json` module.                                                           |
+| 70  | APIs exchange JSON data, which Python represents as dictionaries.                                                                   |
+| 79  | Use `get()` (optionally with a default value) to avoid `KeyError`.                                                                  |
+| 80  | Dictionaries are popular because they offer **O(1)** average lookup, flexible key-value storage, and seamless JSON/API integration. |
+
+Bonus (Frequently Asked in Python Interviews)
+Difference between dictionary and list.
+Difference between dictionary and tuple.
+Difference between dictionary and set.
+Explain mutable vs immutable with dictionary examples.
+Can dictionary keys be mutable?
+Explain hashable objects with examples.
+What are dictionary views?
+Difference between copy() and assignment (=).
+How do you merge two dictionaries in Python?
+Explain dictionary unpacking (**).
+What is collections.defaultdict?
+What is collections.OrderedDict? Is it still needed in modern Python?
+How do dictionaries preserve insertion order?
+How is memory managed for dictionaries?
+Why are dictionaries implemented using hash tables?
+Can None be a dictionary key?
+Can True and 1 both be separate keys? Explain.
+What is the difference between in on a dictionary and in on a list?
+How do you sort a dictionary by keys and by values?
+Explain all dictionary methods with examples.
+
+coding examples| Question                        | Logic                                                       |
+| ------------------------------- | ----------------------------------------------------------- |
+| **21. Swap keys & values**      | Loop through `items()` → `new_dict[value] = key`            |
+| **22. Merge dictionaries**      | Copy items from both dictionaries into a new dictionary     |
+| **23. Character frequency**     | Count each character using a dictionary                     |
+| **24. Word frequency**          | Split text → Count each word using a dictionary             |
+| **25. Find duplicate values**   | Count value frequencies → Print values with count > 1       |
+| **26. Remove duplicate values** | Use a `set` to track seen values and build a new dictionary |
+| **27. Sort by keys**            | `sorted(d.keys())`                                          |
+| **28. Sort by values**          | `sorted(d.items(), key=lambda item: item[1])`               |
+| **29. Find maximum value**      | Traverse dictionary and update maximum                      |
+| **30. Find minimum value**      | Traverse dictionary and update minimum                      |
+
+| Question | Logic                                                                                             |
+| -------- | ------------------------------------------------------------------------------------------------- |
+| **31**   | Loop through both lists using the same index and assign `result[keys[i]] = values[i]`             |
+| **32**   | Use the first letter as the key; create a list if the key doesn't exist, then append the word     |
+| **33**   | Make the original values the new keys; store original keys in a list                              |
+| **34**   | Use nested loops to iterate through the outer and inner dictionaries                              |
+| **35**   | Sum the marks and divide by the number of subjects                                                |
+| **36**   | Calculate each student's total marks and keep track of the highest total                          |
+| **37**   | Convert text to lowercase, remove punctuation, split into words, then count frequencies           |
+| **38**   | Use a dictionary with menu options for Add, Search, Update, Delete, Display, and Exit             |
+| **39**   | Manage inventory by adding, updating, deleting items, and displaying stock                        |
+| **40**   | Use employee ID as the key and store employee details in a nested dictionary; search using the ID |
