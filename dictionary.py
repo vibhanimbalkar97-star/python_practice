@@ -184,15 +184,15 @@ d = {
 # print(res)
 
 # 22. Merge two dictionaries (Without using update())
-d1 = {
-    "a": 1,
-    "b": 2
-}
+# d1 = {
+#     "a": 1,
+#     "b": 2
+# }
 
-d2 = {
-    "c": 3,
-    "d": 4
-}
+# d2 = {
+#     "c": 3,
+#     "d": 4
+# }
 
 # d1.update(d2)
 # print(d1)
@@ -371,3 +371,123 @@ students = {
 #     else:
 #         res[word]=1
 # print(res)
+
+# 38. Create a phone book application
+# Menu:
+# 1 Add Contact
+# 2 Search Contact
+# 3 Update Contact
+# 4 Delete Contact
+# 5 Display All
+# 6 Exit
+
+# phone_book = {}
+
+# while True:
+#     print("\n1.Add contact")
+#     print("2.Search contact")
+#     print("3.Update contact")
+#     print("4.Delete contact")
+#     print("5.Display all")
+#     print("6.Exit")
+
+#     choice = int(input("Enter choice:- "))
+
+#     if choice == 1:
+#         name = input("Name:- ")
+#         number = input("Number:- ")
+
+#         if name in phone_book:
+#             print("Contact already exists")
+#         else:
+#             phone_book[name]=number
+#             print("Contact added successfully")
+
+#     elif choice == 2:
+#         name = input("Search contact:- ")
+#         print(phone_book.get(name, "Contact not found"))
+
+#     elif choice == 3:
+#         name = input("Name:- ")
+       
+#         if name in phone_book:
+#             number = input("Enter new number:- ")
+#             phone_book[name] = number 
+#             print("Contact updated successfully")
+#         else:
+#             print("Contact not found")
+
+#     elif choice == 4:
+#         name = input("Name:- ")
+
+#         if name in phone_book:
+#             phone_book.pop(name)
+#             print("Deleted successfully")
+#         else:
+#             print("Contact not found")
+
+#     elif choice == 5:
+#         if phone_book:
+#             print("\nContacts:")
+#             for name, number in phone_book.items():
+#                 print(name, ":", number)
+#         else:
+#             print("Phone book is empty")
+
+#     elif choice == 6:
+#         print("Exiting...")
+#         break
+
+#     else:
+#         print("Invalid choice")
+
+
+# 39. Inventory Management
+# Store
+# Item → Quantity
+# Allow
+# Add item
+# Update quantity
+# Remove item
+# Display stock
+
+Inventory = {
+    "laptop": 20,
+    "mouse":12
+}
+
+# Inventory["charger"] = 18
+# Inventory["laptop"] = 22
+# Inventory.pop("mouse")
+# print(Inventory)
+
+# 40. Employee Management
+# Store
+# Employee ID
+# Name
+# Salary
+# Department
+# Allow searching by employee ID.
+
+employees = {
+    101:{
+        "name":"Rahul",
+        "salary":50000,
+        "department":"IT"
+    },
+    102:{
+        "name":"Karan",
+        "salary":60000,
+        "department":"HR"
+    }
+}
+
+emp_id = int(input("Enter Employee ID: "))
+
+if emp_id in employees:
+    print(employees[emp_id])
+else:
+    print("Employee Not Found")
+    
+
+    
