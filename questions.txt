@@ -629,3 +629,50 @@ coding examples| Question                        | Logic                        
 | **38**   | Use a dictionary with menu options for Add, Search, Update, Delete, Display, and Exit             |
 | **39**   | Manage inventory by adding, updating, deleting items, and displaying stock                        |
 | **40**   | Use employee ID as the key and store employee details in a nested dictionary; search using the ID |
+
+Difference between dictionary and list.
+Difference between dictionary and tuple.
+Difference between dictionary and set.
+Explain mutable vs immutable with dictionary examples.
+Can dictionary keys be mutable?
+Explain hashable objects with examples.
+What are dictionary views?
+Difference between copy() and assignment (=).
+How do you merge two dictionaries in Python?
+Explain dictionary unpacking (**).
+What is collections.defaultdict?
+What is collections.OrderedDict? Is it still needed in modern Python?
+How do dictionaries preserve insertion order?
+How is memory managed for dictionaries?
+Why are dictionaries implemented using hash tables?
+Can None be a dictionary key?
+Can True and 1 both be separate keys? Explain.
+What is the difference between in on a dictionary and in on a list?
+How do you sort a dictionary by keys and by values?
+Explain all dictionary methods with examples.
+
+| No. | Answer                                                                                                                |
+| --- | --------------------------------------------------------------------------------------------------------------------- |
+| 81  | Keys must be immutable (hashable).                                                                                    |
+| 82  | Duplicate values are allowed.                                                                                         |
+| 83  | Yes, dictionaries can store functions as values.                                                                      |
+| 84  | `keys()`, `values()`, and `items()` return dynamic view objects.                                                      |
+| 85  | `=` shares the same object; `copy()` creates a shallow copy.                                                          |
+| 86  | Use `key in dictionary`.                                                                                              |
+| 87  | Use `value in dictionary.values()`.                                                                                   |
+| 88  | Yes, `None` can be a key.                                                                                             |
+| 89  | Yes, `True` and `False` can be keys.                                                                                  |
+| 90  | `{}` creates an empty dictionary; `set()` creates an empty set.                                                       |
+| 91  | Use `clear()`.                                                                                                        |
+| 92  | Iterate with `for key, value in d.items()`.                                                                           |
+| 93  | Use `dict(list_of_tuples)`.                                                                                           |
+| 94  | Dictionary unpacking uses `**`.                                                                                       |
+| 95  | Dictionaries can be compared using `==`.                                                                              |
+| 96  | Dictionaries preserve insertion order (Python 3.7+).                                                                  |
+| 97  | Updating values is allowed; adding/removing keys during iteration raises `RuntimeError`.                              |
+| 98  | Used in JSON, APIs, configs, user profiles, inventories, caching, etc.                                                |
+| 99  | `pop(key, default)` safely removes a key without raising `KeyError`.                                                  |
+| 100 | Dictionaries are fast, flexible, and ideal for key-value data, making them one of Python's most-used data structures. |
+
+================================================================================================================================================
+File handling
