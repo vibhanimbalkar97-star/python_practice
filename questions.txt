@@ -676,3 +676,128 @@ Explain all dictionary methods with examples.
 
 ================================================================================================================================================
 File handling
+
+| No. | Question                                          | Short Answer                                                                             |
+| --- | ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 1   | What is file handling?                            | Reading, writing, creating, and managing files in Python.                                |
+| 2   | Why use file handling?                            | To store data permanently for future use.                                                |
+| 3   | File modes                                        | `r` (read), `w` (write), `a` (append), `x` (create), `r+`, `w+`, `a+`, `rb`, `wb`, `ab`. |
+| 4   | Difference between `r`, `w`, `a`                  | `r`: Read only. `w`: Overwrites file. `a`: Adds data to the end.                         |
+| 5   | Which modes create a file if it doesn't exist?    | `w`, `a`, `x`, `w+`, `a+`.                                                               |
+| 6   | Which mode deletes previous content?              | `w` and `w+`.                                                                            |
+| 7   | Which mode appends data?                          | `a` and `a+`.                                                                            |
+| 8   | What happens if a file doesn't exist in `r` mode? | Raises `FileNotFoundError`.                                                              |
+| 9   | Syntax to open a file                             | `open("file.txt", "mode")`.                                                              |
+| 10  | Why close a file?                                 | Frees resources, saves changes, prevents leaks.                                          |
+| 11  | How to close a file?                              | `file.close()`.                                                                          |
+| 12  | Advantage of `with open()`                        | Automatically closes the file, even if an error occurs.                                  |
+| 13  | `open()` vs `with open()`                         | `open()` needs `close()`. `with open()` closes automatically.                            |
+| 14  | What if you forget to close a file?               | May cause resource leaks, unsaved data, or file access issues.                           |
+| 15  | Default mode of `open()`                          | `r` (read mode).                                                                         |
+| 16  | `read()` vs `readline()` vs `readlines()`         | `read()`: Entire file. `readline()`: One line. `readlines()`: List of all lines.         |
+| 17  | Read entire file                                  | `file.read()`.                                                                           |
+| 18  | Read one line                                     | `file.readline()`.                                                                       |
+| 19  | Read all lines into a list                        | `file.readlines()`.                                                                      |
+| 20  | Read file line by line                            | `for line in file:`                                                                      |
+
+| Topic                                                   | Answer                   |
+| ------------------------------------------------------- | ------------------------ |
+| Recommended way to open files                           | `with open()`            |
+| Recommended way to read large files                     | `for line in file:`      |
+| File pointer starts at                                  | Beginning (position `0`) |
+| Which mode is safest for reading?                       | `r`                      |
+| Which mode is safest for adding data?                   | `a`                      |
+| Which mode creates a new file only if it doesn't exist? | `x`                      |
+| Which mode is used for images/PDFs?                     | `rb` and `wb`            |
+| Which method closes a file automatically?               | `with open()`            |
+
+| No.    | Question                                               | Short Answer                                                                                                                                                 |
+| ------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **21** | What happens if `read()` is called twice?              | The first `read()` reads the remaining content. The second `read()` returns an empty string (`''`) because the file pointer is at the end of the file (EOF). |
+| **22** | What does `seek()` do?                                 | `seek(position)` moves the file pointer to the specified position (in bytes/characters from the beginning).                                                  |
+| **23** | What does `tell()` do?                                 | `tell()` returns the current position of the file pointer.                                                                                                   |
+| **24** | Difference between `seek()` and `tell()`               | `seek()` changes the file pointer position. `tell()` shows the current file pointer position.                                                                |
+| **25** | How do you move the cursor to the beginning of a file? | Use `file.seek(0)`.                                                                                                                                          |
+| **26** | Difference between `write()` and `writelines()`        | `write()` writes a single string. `writelines()` writes multiple strings from a list but does **not** add newline characters automatically.                  |
+| **27** | Does `write()` automatically add a newline?            | No. You must add `\n` yourself if you want a new line.                                                                                                       |
+| **28** | How do you write multiple lines?                       | Use `writelines()` or call `write()` multiple times with `\n`.                                                                                               |
+| **29** | What happens if you open a file in `w` mode?           | If the file exists, all existing content is deleted. If it doesn't exist, a new file is created.                                                             |
+| **30** | What happens in `a` mode?                              | Data is added to the end of the file. Existing content remains unchanged. If the file doesn't exist, it is created.                                          |
+
+⭐ Interview Tips
+seek(0) → Move to the beginning of the file.
+tell() → Check the current cursor position.
+write() → Writes one string.
+writelines() → Writes multiple strings but does not add \n.
+w → Overwrites existing content.
+a → Preserves existing content and appends new data.
+
+| No.    | Question                                              | Short Answer                                                                                                                     |
+| ------ | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **31** | How do you handle a file that doesn't exist?          | Use a `try-except` block to catch the `FileNotFoundError` exception.                                                             |
+| **32** | Which exception is raised when a file is missing?     | `FileNotFoundError`.                                                                                                             |
+| **33** | Write a program using `try-except` for file handling. | Use `try` to open/read the file and `except FileNotFoundError` to handle the error gracefully.                                   |
+| **34** | What is the purpose of `finally` in file handling?    | The `finally` block always executes, whether an exception occurs or not. It is commonly used to close a file or perform cleanup. |
+
+| Topic                     | Answer                                        |
+| ------------------------- | --------------------------------------------- |
+| Handle missing file       | `try-except`                                  |
+| Missing file exception    | `FileNotFoundError`                           |
+| Purpose of `except`       | Handles errors without crashing the program   |
+| Purpose of `finally`      | Always executes; used for cleanup             |
+| Recommended file handling | `with open()` (automatically closes the file) |
+
+Interview Tip: When using with open(), you usually don't need a finally block to close the file, because with handles it automatically. finally is more useful when you're managing resources manually.
+
+| No.    | Question                                       | Short Answer                                                                                                                                            |
+| ------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **61** | Difference between text files and binary files | **Text files** store readable characters (e.g., `.txt`, `.csv`). **Binary files** store data in bytes (e.g., `.jpg`, `.png`, `.pdf`, `.mp3`).           |
+| **62** | What are binary modes?                         | Binary modes are used to read or write binary files. Common modes: `rb`, `wb`, `ab`, `rb+`, `wb+`, `ab+`.                                               |
+| **63** | What is `rb` mode?                             | `rb` stands for **Read Binary**. It opens a binary file for reading.                                                                                    |
+| **64** | What is `wb` mode?                             | `wb` stands for **Write Binary**. It creates or overwrites a binary file for writing.                                                                   |
+| **65** | What kinds of files are opened in binary mode? | Images (`.jpg`, `.png`), PDFs (`.pdf`), videos (`.mp4`), audio (`.mp3`), Word files (`.docx`), ZIP files (`.zip`), executables (`.exe`).                |
+| **66** | Can we use `read()` in binary mode?            | Yes. It returns **bytes** instead of a string.                                                                                                          |
+| **67** | Difference between text mode and binary mode   | **Text mode** reads/writes strings. **Binary mode** reads/writes bytes.                                                                                 |
+| **68** | What is file buffering?                        | Buffering temporarily stores data in memory before reading from or writing to the file, improving performance.                                          |
+| **69** | What is a file pointer?                        | A file pointer (cursor) indicates the current position in the file where the next read or write operation will occur.                                   |
+| **70** | Explain EOF (End of File).                     | EOF is the end of a file. When the file pointer reaches EOF, further `read()` calls return an empty string (`''`) in text mode or `b''` in binary mode. |
+
+| Topic                   | One-Line Answer                                                      |
+| ----------------------- | -------------------------------------------------------------------- |
+| Text file               | Stores readable text (`str`)                                         |
+| Binary file             | Stores raw bytes (`bytes`)                                           |
+| `rb`                    | Read binary                                                          |
+| `wb`                    | Write binary                                                         |
+| Binary files            | Images, PDFs, videos, audio, ZIPs                                    |
+| `read()` in binary mode | Returns `bytes`                                                      |
+| Buffering               | Temporary memory used to improve file I/O performance                |
+| File pointer            | Current read/write position in the file                              |
+| EOF                     | End of the file; further reads return `''` (or `b''` in binary mode) |
+
+| No.    | Question                                                   | Short Answer                                                                                                                                              |
+| ------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **71** | Why is `with open()` preferred?                            | It automatically closes the file, even if an exception occurs, making the code safer and cleaner.                                                         |
+| **72** | What happens if a file already exists and we use `x` mode? | Python raises a `FileExistsError`. `x` mode only creates a new file if it doesn't already exist.                                                          |
+| **73** | Difference between `write()` and append (`a` mode)         | `write()` writes data to a file (usually in `w` mode, overwriting existing content). `a` mode adds new data to the end without deleting existing content. |
+| **74** | Can multiple programs open the same file?                  | Yes, but simultaneous writing can cause conflicts or data corruption if not managed properly.                                                             |
+| **75** | Difference between absolute and relative file paths        | **Absolute path:** Full path from the root directory. **Relative path:** Path relative to the current working directory.                                  |
+| **76** | How do you check if a file exists?                         | Use `os.path.exists()` or `pathlib.Path.exists()`.                                                                                                        |
+| **77** | How do you delete a file?                                  | Use `os.remove("filename")`.                                                                                                                              |
+| **78** | How do you rename a file?                                  | Use `os.rename("old_name", "new_name")`.                                                                                                                  |
+| **79** | How do you create a folder in Python?                      | Use `os.mkdir()` (single folder) or `os.makedirs()` (nested folders).                                                                                     |
+| **80** | How do you list all files in a folder?                     | Use `os.listdir()` or `pathlib.Path.iterdir()`.                                                                                                           |
+
+| Topic             | One-Line Answer                                                    |
+| ----------------- | ------------------------------------------------------------------ |
+| `with open()`     | Automatically closes the file.                                     |
+| `x` mode          | Creates a new file; raises `FileExistsError` if it already exists. |
+| `w` mode          | Overwrites existing content.                                       |
+| `a` mode          | Appends data to the end of the file.                               |
+| Multiple programs | Multiple reads are fine; simultaneous writes can cause conflicts.  |
+| Absolute path     | Full path from the root directory.                                 |
+| Relative path     | Path relative to the current working directory.                    |
+| Check file exists | `os.path.exists()` or `Path.exists()`.                             |
+| Delete file       | `os.remove()`.                                                     |
+| Rename file       | `os.rename()`.                                                     |
+| Create folder     | `os.mkdir()` / `os.makedirs()`.                                    |
+| List files        | `os.listdir()` or `Path.iterdir()`.                                |
