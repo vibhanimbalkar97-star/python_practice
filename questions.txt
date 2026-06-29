@@ -801,3 +801,50 @@ Interview Tip: When using with open(), you usually don't need a finally block to
 | Rename file       | `os.rename()`.                                                     |
 | Create folder     | `os.mkdir()` / `os.makedirs()`.                                    |
 | List files        | `os.listdir()` or `Path.iterdir()`.                                |
+
+35. Create a file and write your name.
+36. Read and print file contents.
+37. Append a new line.
+38. Count the number of lines in a file.
+39. Count the number of words.
+40. Count the number of characters.
+41. Count vowels in a file.
+42. Count uppercase and lowercase letters.
+43. Count digits in a file.
+44. Find the longest word.
+45. Print only even-numbered lines.
+46. Print only odd-numbered lines.
+47. Copy one file into another.
+48. Merge two text files.
+49. Reverse the contents of a file.
+50. Replace one word with another.
+51. Remove blank lines.
+52. Find duplicate words.
+53. Find the most frequently used word.
+54. Search for a word.
+55. Count how many times a word appears.
+56. Convert all text to uppercase.
+57. Convert all text to lowercase.
+58. Capitalize every word.
+59. Remove punctuation from a file.
+60. Store user input into a file.
+
+Coding Interview Practice
+
+These are commonly asked in Python interviews:
+
+Copy a file.
+Merge two files.
+Compare two files.
+Count words, lines, and characters.
+Find duplicate words.
+Replace text in a file.
+Search a word in a file.
+Remove blank lines.
+Find the longest line.
+Create a simple notes application using file handling.
+Create a student record system using text files.
+Build a contact book that stores data in a file.
+Create a login system using username and password stored in a file.
+
+====================================================================================================================================================
