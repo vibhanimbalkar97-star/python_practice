@@ -848,3 +848,170 @@ Build a contact book that stores data in a file.
 Create a login system using username and password stored in a file.
 
 ====================================================================================================================================================
+OOPS:
+classes and objects:
+| No. | Question                   | Short Answer                                                                              |
+| --- | -------------------------- | ----------------------------------------------------------------------------------------- |
+| 1   | Class                      | Blueprint to create objects                                                               |
+| 2   | Object                     | Instance of a class                                                                       |
+| 3   | Class vs Object            | Class = blueprint, Object = real instance                                                 |
+| 4   | Create class               | `class Student:`                                                                          |
+| 5   | Create object              | `s1 = Student()`                                                                          |
+| 6   | `__init__()`               | Constructor, runs automatically on object creation                                        |
+| 7   | `self`                     | Refers to the current object                                                              |
+| 8   | Class without objects      | Yes                                                                                       |
+| 9   | Object without class       | No                                                                                        |
+| 10  | Attributes                 | Variables stored in an object using `self`                                                |
+| 11  | Print attributes           | `print(obj.name)`                                                                         |
+| 12  | Modify attribute           | `obj.name = "New"`                                                                        |
+| 13  | Delete attribute           | `del obj.name`                                                                            |
+| 14  | Delete object              | `del obj`                                                                                 |
+| 15  | No `__init__()`            | Python provides a default constructor                                                     |
+| 16  | Multiple objects           | Create as many instances as needed                                                        |
+| 17  | Check type                 | `type(obj)`                                                                               |
+| 18  | `__str__()`                | User-friendly string representation                                                       |
+| 19  | `__repr__()`               | Official/debug string representation                                                      |
+| 20  | Instance vs Local variable | Instance variables belong to objects (`self`); local variables exist only within a method |
+
+==========================================================================================================================================
+
+methods:
+Create a calculator class with add(), subtract(), multiply(), divide().
+Create a BankAccount class with deposit() and withdraw().
+Prevent withdrawing more than the balance.
+Create a Rectangle class with area().
+Create a Circle class with circumference().
+Count how many objects are created using a class variable.
+Create an Employee class with company name as a class variable.
+51. Create a Car class with company and model.
+52. Create a Book class with title, author, price.
+53. Create a Laptop class with brand and RAM.
+54. Create a Movie class with name and rating.
+55. Create a Mobile class with brand and price.
+
+
+| No. | Question                | Short Answer                                                        |
+| --- | ----------------------- | ------------------------------------------------------------------- |
+| 21  | Display details         | Create a method like `display()`                                    |
+| 22  | Return age              | Use `return self.age`                                               |
+| 23  | Pass arguments          | `def greet(self, name)`                                             |
+| 24  | Update salary           | Assign `self.salary = new_salary`                                   |
+| 25  | Yearly salary           | `monthly_salary * 12`                                               |
+| 26  | Increase marks          | `self.marks += 10`                                                  |
+| 27  | Method calling another  | `self.method_name()`                                                |
+| 28  | `self.name`             | Instance variable of the current object                             |
+| 29  | Attributes vs Methods   | Attributes store data; methods perform actions                      |
+| 30  | Instance method         | Uses `self`                                                         |
+| 31  | Class method            | Uses `@classmethod` and `cls`                                       |
+| 32  | Static method           | Uses `@staticmethod`; no `self` or `cls`                            |
+| 33  | Class vs Static method  | Class method accesses class data; static method is a utility method |
+| 34  | Use `@classmethod`      | Access or modify class variables                                    |
+| 35  | Use `@staticmethod`     | Utility functions related to the class                              |
+| 36  | Calculator class        | Implement `add()`, `subtract()`, `multiply()`, `divide()`           |
+| 37  | BankAccount             | Methods: `deposit()` and `withdraw()`                               |
+| 38  | Prevent over-withdrawal | Check `amount <= balance` before withdrawing                        |
+| 39  | Rectangle area          | `length * width`                                                    |
+| 40  | Circle circumference    | `2 * π * radius` (e.g., `2 * 3.14 * radius`)                        |
+
+1 Instance methods use self because they work with the data of a specific object. self refers to the current instance.
+2 Class methods use cls because they work with the class itself, allowing access to and modification of class variables shared by all objects.
+3 Static methods use neither self nor cls because they don't need instance or class data. They are utility functions that are logically related to the class.
+
+| Feature                   | Instance Method    | Class Method    | Static Method                  |
+| ------------------------- | ------------------ | --------------- | ------------------------------ |
+| First parameter           | `self`             | `cls`           | None                           |
+| Works with                | Object             | Class           | Neither object nor class       |
+| Access instance variables | ✅ Yes              | ❌ No            | ❌ No                           |
+| Access class variables    | ✅ Yes              | ✅ Yes           | ❌ No (unless using class name) |
+| Decorator                 | None               | `@classmethod`  | `@staticmethod`                |
+| Called by                 | Object (typically) | Class or object | Class or object                |
+
+| No. | Question                             | Short Answer                                                                        |
+| --- | ------------------------------------ | ----------------------------------------------------------------------------------- |
+| 41  | Constructor                          | `__init__()`; called automatically when an object is created                        |
+| 42  | Default vs Parameterized constructor | Default takes only `self`; parameterized takes additional arguments                 |
+| 43  | Multiple constructors                | ❌ No. Python doesn't support constructor overloading; use default arguments instead |
+| 44  | Instance variables                   | Belong to each object; created using `self`                                         |
+| 45  | Class variables                      | Belong to the class; shared by all objects                                          |
+| 46  | Class vs Instance variables          | Class variables are shared; instance variables are unique to each object            |
+| 47  | Modify class variable                | Use `ClassName.variable = value` or a `@classmethod`                                |
+| 48  | Count objects                        | Increment a class variable in `__init__()`                                          |
+| 49  | Employee class                       | Store `company` as a class variable and `name` as an instance variable              |
+| 50  | Same variable name                   | Instance variable shadows the class variable for that object                        |
+| 51  | Car class                            | Class with `company` and `model` attributes                        |
+| 52  | Book class                           | Class with `title`, `author`, and `price`                          |
+| 53  | Laptop class                         | Class with `brand` and `ram`                                       |
+| 54  | Movie class                          | Class with `name` and `rating`                                     |
+| 55  | Mobile class                         | Class with `brand` and `price`                                     |
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+s1 = Student("Rahul", 22)
+s1.display()
+
+This demonstrates that you know:
+
+Constructors (__init__)
+Instance variables (self.name, self.age)
+Instance methods (display())
+Object creation (Student(...))
+Method calling (s1.display())
+============================================================================================================
+
+encapuslation:
+
+64.Create getter methods.
+65. Create setter methods.
+66. Validate age using setter.
+67. Prevent a negative balance.
+
+| No. | Question                     | Short Answer                                                       |
+| --- | ---------------------------- | ------------------------------------------------------------------ |
+
+| 56  | Encapsulation                | Combining data and methods; restricting direct access              |
+| 57  | Public members               | Accessible from anywhere; no underscore                            |
+| 58  | Protected members            | Prefix `_`; intended for internal use by convention                |
+| 59  | Private members              | Prefix `__`; accessed through name mangling                        |
+| 60  | `_var` vs `__var`            | `_var` = protected (convention); `__var` = private (name mangling) |
+| 61  | Protected variable           | Can be accessed directly, but should be treated as internal        |
+| 62  | Private variable             | Direct access raises `AttributeError`                              |
+| 63  | Name mangling                | `__var` becomes `_ClassName__var` internally                       |
+| 64  | Getter                       | Returns private data                                               |
+| 65  | Setter                       | Updates private data                                               |
+| 66  | Setter validation            | Check values before updating                                       |
+| 67  | Negative balance             | Validate withdrawals against balance                               |
+| 68  | `@property`                  | Access a method like an attribute                                  |
+| 69  | Getter/Setter vs `@property` | `@property` provides cleaner, more Pythonic access                 |
+| 70  | Importance of encapsulation  | Protects data, validates updates, improves maintainability         |
+
+Questions 56–70 are frequently asked in Python interviews. Be ready to explain:
+
+Public vs Protected vs Private members
+Name Mangling (__var → _ClassName__var)
+Getter/Setter methods
+@property and why it's preferred in modern Python
+Why encapsulation helps keep object data safe and consistent
+
+| No. | Question                    | Short Answer                                                  |
+| --- | --------------------------- | ------------------------------------------------------------- |
+| 71  | Inheritance                 | Child class acquires properties and methods of a parent class |
+| 72  | Why inheritance?            | Code reuse, less duplication, easier maintenance              |
+| 73  | Person class                | Create a parent class with attributes/methods                 |
+| 74  | Student inherits Person     | `class Student(Person):`                                      |
+| 75  | Access parent methods       | Child object calls inherited methods directly                 |
+| 76  | `super()`                   | Calls parent constructor or methods                           |
+| 77  | `self` vs `super()`         | `self` → current object; `super()` → parent class             |
+| 78  | Types of inheritance        | Single, Multiple, Multilevel, Hierarchical, Hybrid            |
+| 79  | Single inheritance          | One parent → One child                                        |
+| 80  | Multiple inheritance        | Multiple parents → One child                                  |
+| 81  | Multilevel inheritance      | Grandparent → Parent → Child                                  |
+| 82  | Hierarchical inheritance    | One parent → Multiple children                                |
+| 83  | Hybrid inheritance          | Combination of multiple inheritance types                     |
+| 84  | Method overriding           | Child redefines a parent method                               |
+| 85  | Call parent & child methods | Use `super().method_name()`                                   |
