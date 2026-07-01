@@ -1015,3 +1015,59 @@ Why encapsulation helps keep object data safe and consistent
 | 83  | Hybrid inheritance          | Combination of multiple inheritance types                     |
 | 84  | Method overriding           | Child redefines a parent method                               |
 | 85  | Call parent & child methods | Use `super().method_name()`                                   |
+
+============================================================================================================
+ploymorphism
+
+| No. | Question             | Short Answer                                                 |
+| --- | -------------------- | ------------------------------------------------------------ |
+| 86  | Polymorphism         | One interface, many forms; same method behaves differently   |
+| 87  | Method overriding    | Child class replaces a parent method                         |
+| 88  | Method overloading   | Not directly supported; use default arguments or `*args`     |
+| 89  | Duck typing          | Focus on an object's behavior, not its type                  |
+| 90  | Operator overloading | Customize operators using magic methods                      |
+| 91  | Overload `+`         | Implement `__add__()`                                        |
+| 92  | Overload `>`         | Implement `__gt__()`                                         |
+| 93  | Overload `==`        | Implement `__eq__()`                                         |
+| 94  | Magic methods        | Special `__method__` functions that define object behavior   |
+| 95  | Common magic methods | `__init__`, `__str__`, `__repr__`, `__add__`, `__eq__`, etc. |
+=============================================================================================================================
+100. Build a mini project using OOP.
+
+Ideas:
+
+Student Management System
+Bank Management System
+Library Management System
+ATM Simulation
+Employee Management System
+
+| No. | Question                     | Short Answer                                                                   |
+| --- | ---------------------------- | ------------------------------------------------------------------------------ |
+| 96  | Abstraction                  | Hides implementation details; shows only essential functionality               |
+| 97  | Abstraction vs Encapsulation | Abstraction hides implementation; encapsulation protects data                  |
+| 98  | Abstract Class               | Created using `ABC` and `@abstractmethod`                                      |
+| 99  | Abstract Class vs Interface  | Python has no separate interface; abstract classes can be used like interfaces |
+
+Final OOP Revision Table
+| Concept              | Keyword                                   |
+| -------------------- | ----------------------------------------- |
+| Class                | Blueprint                                 |
+| Object               | Instance                                  |
+| Constructor          | `__init__()`                              |
+| Instance Variable    | `self.var`                                |
+| Class Variable       | Shared by all objects                     |
+| Encapsulation        | Data hiding                               |
+| Inheritance          | Code reuse                                |
+| Polymorphism         | One interface, many forms                 |
+| Abstraction          | Hide implementation details               |
+| Method Overriding    | Child replaces parent method              |
+| Duck Typing          | Behavior matters, not type                |
+| Operator Overloading | Magic methods (`__add__`, `__eq__`, etc.) |
+| Abstract Class       | `ABC` + `@abstractmethod`                 |
+| Composition          | Has-a relationship                        |
+| `isinstance()`       | Check object type                         |
+| `issubclass()`       | Check inheritance                         |
+| `id()`               | Object identity                           |
+| `is`                 | Identity comparison                       |
+| `==`                 | Value comparison                          |
