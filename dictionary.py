@@ -469,25 +469,25 @@ Inventory = {
 # Department
 # Allow searching by employee ID.
 
-employees = {
-    101:{
-        "name":"Rahul",
-        "salary":50000,
-        "department":"IT"
-    },
-    102:{
-        "name":"Karan",
-        "salary":60000,
-        "department":"HR"
-    }
-}
+# employees = {
+#     101:{
+#         "name":"Rahul",
+#         "salary":50000,
+#         "department":"IT"
+#     },
+#     102:{
+#         "name":"Karan",
+#         "salary":60000,
+#         "department":"HR"
+#     }
+# }
 
-emp_id = int(input("Enter Employee ID: "))
+# emp_id = int(input("Enter Employee ID: "))
 
-if emp_id in employees:
-    print(employees[emp_id])
-else:
-    print("Employee Not Found")
+# if emp_id in employees:
+#     print(employees[emp_id])
+# else:
+#     print("Employee Not Found")
     
 
     

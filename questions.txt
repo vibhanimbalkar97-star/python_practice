@@ -1071,3 +1071,164 @@ Final OOP Revision Table
 | `id()`               | Object identity                           |
 | `is`                 | Identity comparison                       |
 | `==`                 | Value comparison                          |
+===================================================================================================================
+OOPS coding questions:
+Level 1: Basic Class Programs
+1. Create a Student class and calculate the average of 3 subjects.
+2. Create an Employee class and calculate yearly salary.
+3. Create a Rectangle class with area and perimeter methods.
+4. Create a Circle class with area and circumference.
+5. Create a BankAccount class with:
+Deposit
+Withdraw
+Check Balance
+
+Level 2: Constructor Practice
+6. Create a class with default constructor.
+7. Create a class with parameterized constructor.
+8. Count total objects created.
+9. Print object details using __str__().
+10. Create two objects having different values.
+
+Level 3: Instance & Class Variables
+11. Count total students using class variable.
+12. Store company name as class variable.
+13. Change company name for all employees.
+14. Show difference between instance and class variables.
+15. Create unique employee IDs using a class variable.
+
+Level 4: Encapsulation
+16. Validate age (age cannot be negative).
+17. Validate salary (salary > 0).
+18. Bank account should never have a negative balance.
+19. Student marks should be between 0–100.
+20. Use @property instead of getters/setters.
+
+Level 5: Inheritance
+21. Person → Student
+22. Animal → Dog
+23. Vehicle → Car
+24. Employee → Manager
+25. Shape → Rectangle
+
+Level 6: super()
+26. Call parent constructor.
+27. Call parent method.
+28. Override a method and still call the parent version.
+29. Pass arguments using super().
+30. Parent constructor with multiple parameters.
+
+Level 7: Polymorphism
+31. Animal sound example.
+32. Payment system (CreditCard, UPI, PayPal).
+33. Notification system (Email, SMS, Push).
+34. Shape area example.
+35. Vehicle start example.
+
+Level 8: Operator Overloading
+36. Add two students' marks.
+37. Compare employee salaries.
+38. Compare rectangle areas.
+39. Add two vectors.
+40. Compare product prices.
+
+Level 9: Abstract Classes
+41. Shape → Rectangle → Circle
+42. Payment abstract class.
+43. Vehicle abstract class.
+44. Animal abstract class.
+45. Employee abstract class.
+
+Level 10: Composition
+46. Car has Engine.
+47. Computer has CPU.
+48. Library has Books.
+49. School has Students.
+50. Company has Employees.
+
+Level 11: Real Interview Coding Questions
+51. Library Management System
+Features:
+Add Book
+Remove Book
+Display Books
+
+52. Student Management System
+Features:
+Add Student
+Display Student
+Calculate Percentage
+
+53. ATM Machine
+Features:
+Deposit
+Withdraw
+Check Balance
+
+54. Employee Management System
+Features:
+Add Employee
+Update Salary
+Display Details
+
+55. Shopping Cart
+Features:
+Add Item
+Remove Item
+Total Bill
+
+56. Movie Ticket Booking
+Features:
+Book Seat
+Cancel Seat
+Show Available Seats
+
+57. Hospital Management
+Features:
+Add Patient
+Doctor
+Appointment
+
+58. Hotel Booking
+Features:
+Book Room
+Cancel Room
+Check Availability
+
+59. Banking System
+Features:
+Multiple Accounts
+Transfer Money
+Check Balance
+
+60. Inventory Management
+Features:
+Add Product
+Update Stock
+Remove Product
+
+Advanced OOP Interview Questions
+61. Difference between aggregation and composition.
+62. What is MRO (Method Resolution Order)?
+63. Explain the Diamond Problem.
+64. What is super() in multiple inheritance?
+65. Explain __new__() vs __init__().
+66. Difference between shallow copy and deep copy for objects.
+67. What is object serialization?
+68. Explain the Singleton design pattern.
+69. What are dataclasses in Python?
+70. What are mixins?
+Most Frequently Asked Coding Questions
+
+If you have limited time, focus on these first:
+
+✅ Bank Account
+✅ Student Management System
+✅ Library Management System
+✅ Employee Management System
+✅ ATM Machine
+✅ Shopping Cart
+✅ Shape (Inheritance + Polymorphism)
+✅ Vehicle (Abstract Class)
+✅ Car–Engine (Composition)
+✅ Employee Salary (Encapsulation)
