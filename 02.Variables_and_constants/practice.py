@@ -158,7 +158,6 @@ def outer():
     def inner():
         nonlocal e
         e = 8
-        print(e)
     inner()
     print(e)
 outer()
