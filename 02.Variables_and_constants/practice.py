@@ -120,21 +120,21 @@ def outer():
 outer() # 5
 
 #8. Variable scope: LEGB rule
-a4 = "Global"
-# print(a4) # Global
+# a4 = "Global"
+# # print(a4) # Global
 
-def Outer():
-    a4 = "Enclosing"
+# def Outer():
+#     a4 = "Enclosing"
 
-    def inner():
-        a4 = "Local"
-        print(a4) #Local
+#     def inner():
+#         a4 = "Local"
+#         print(a4) #Local
 
-    inner()
-    # print(a4) Enclosing
-# print(a4) Global
-Outer()
-# print(a4) Global
+#     inner()
+#     # print(a4) Enclosing
+# # print(a4) Global
+# Outer()
+# # print(a4) Global
 
 a = [1, 2]
 b = a
@@ -146,3 +146,21 @@ a = [1, 2]
 b = [1, 2]
 b.append(3)
 print(a, b)  # [1, 2] [1, 2, 3]
+
+a = [1, 2]
+b = a
+b = b + [3]
+print(a) # [1,2]
+print(b) #[1,2,3]
+
+def outer():
+    e = 3
+    def inner():
+        nonlocal e
+        e = 8
+        print(e)
+    inner()
+    print(e)
+outer()
+
+
