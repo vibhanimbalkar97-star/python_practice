@@ -18,3 +18,6 @@ print(type(num1)) # dict
 
 num2 = set()
 print(type(num2))
+
+my_set = {1, 2, [3, 4]}
+print(my_set)

@@ -20,3 +20,6 @@ students["name"] = "AAAA"
 # students["email"]       #keyerror
 students.get("email") # nothing gives o/p only
 print(students)
+
+print(type(5 / 2))
+print(type(5 // 2))

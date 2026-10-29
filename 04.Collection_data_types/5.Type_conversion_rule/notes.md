@@ -59,7 +59,9 @@ Why? Empty collections and zero are falsy. Non-empty strings and collections are
 ### Rule 1: `+` depends on the types
 
 ```
-print(2 + 3)       # 5print("2" + "3")   # 23print("2" + 3)     # TypeError
+print(2 + 3)       # 5
+print("2" + "3")   # 23
+print("2" + 3)     # TypeError
 ```
 
 Numbers are added; strings are concatenated. Mixed string-integer addition raises an error.
@@ -75,7 +77,9 @@ But `"Hi" * 2.5` raises `TypeError`, because string repetition requires an integ
 ### Rule 3: Strings are immutable
 
 ```
-text = "cat"# text[0] = "b"  # TypeErrortext = "bat"     # Valid: reassigns the name
+text = "cat" # 
+text[0] = "b"  # TypeError
+text = "bat"     # Valid: reassigns the name
 ```
 
 You cannot modify a string character in place, but you can reassign the variable.
@@ -83,7 +87,10 @@ You cannot modify a string character in place, but you can reassign the variable
 ### Rule 4: Lists are mutable
 
 ```
-a = [1, 2]b = ab.append(3)print(a)  # [1, 2, 3]
+a = [1, 2]
+b = a
+b.append(3)
+print(a)  # [1, 2, 3]
 ```
 
 Both names refer to the same list, so the mutation is visible through both.
@@ -91,7 +98,10 @@ Both names refer to the same list, so the mutation is visible through both.
 ### Rule 5: `==` and `is` are different
 
 ```
-a = [1, 2]b = [1, 2]print(a == b)  # Trueprint(a is b)  # False
+a = [1, 2]
+b = [1, 2]
+print(a == b)  # True
+print(a is b)  # False
 ```
 
 `==` compares equality; `is` checks object identity.
@@ -113,13 +123,16 @@ Convert the input when you need to perform numeric operations.
 ### Rule 7: `type()` identifies a value's type
 
 ```
-print(type(10))     # intprint(type(10.0))   # floatprint(type(True))   # bool
+print(type(10))     # int
+print(type(10.0))   # float
+print(type(True))   # bool
 ```
 
 One tricky fact: `bool` is a subclass of `int`.
 
 ```
-print(isinstance(True, int))  # Trueprint(True + 2)               # 3
+print(isinstance(True, int))  # True
+print(True + 2)               # 3
 ```
 
 This works because Python treats `True` numerically as `1` and `False` as `0`. In normal application code, avoid relying on this unless you intentionally need it.
