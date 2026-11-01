@@ -115,28 +115,48 @@
 # # NaN
 # print(bool(float("nan")))  # True bcz it is floating value not a number
 
-# Lists
-print(list("Python"))                     # ['P', 'y', 't', 'h', 'o', 'n']
-print(tuple("ABC"))                       # ('A', 'B', 'C')
-print(set("Hello"))                       # {'H', 'o', 'l', 'e'}
+# # Lists
+# print(list("Python"))                     # ['P', 'y', 't', 'h', 'o', 'n']
+# print(tuple("ABC"))                       # ('A', 'B', 'C')
+# print(set("Hello"))                       # {'H', 'o', 'l', 'e'}
 
-print(tuple([1,2,3]))                     # (1, 2, 3)
-print(tuple(["Hello", "ABC"]))            # ('Hello', 'ABC')
+# print(tuple([1,2,3]))                     # (1, 2, 3)
+# print(tuple(["Hello", "ABC"]))            # ('Hello', 'ABC')
 
-print(list((4,5,6)))                      # [4, 5, 6]
-print(list(("ABC", "Hello1", "Hello2")))  # ['ABC', 'Hello1', 'Hello2']
+# print(list((4,5,6)))                      # [4, 5, 6]
+# print(list(("ABC", "Hello1", "Hello2")))  # ['ABC', 'Hello1', 'Hello2']
 
-print(set([1,2,3,4,5,6,6]))               # {1, 2, 3, 4, 5, 6}
-print(list({10,11,12,13,14}))             # [10, 11, 12, 13, 14]
+# print(set([1,2,3,4,5,6,6]))               # {1, 2, 3, 4, 5, 6}
+# print(list({10,11,12,13,14}))             # [10, 11, 12, 13, 14]
 
-data = {"a": 10, "b":20}
-print(list(data))                         # ['a', 'b']
-print(tuple(data))                        # ('a', 'b')
-print(set(data))                          # {'b', 'a'}
+# data = {"a": 10, "b":20}
+# print(list(data))                         # ['a', 'b']
+# print(tuple(data))                        # ('a', 'b')
+# print(set(data))                          # {'b', 'a'}
 
-print(list(range(0, 5)))                  # [0, 1, 2, 3, 4]
+# print(list(range(0, 5)))                  # [0, 1, 2, 3, 4]
 
 # print(list(123)) type error cannot iterable through integer
+
+
+"""dict() rules"""
+# list to dict
+print(dict([("name", "ABC"), ("age", 20)]))        # {'name':'ABC', 'age':20}
+
+#  tuple to dict
+print(dict((("name", "ABC"), ("age", 20))))        # {'name':'ABC', 'age':20}
+
+# dict to dict
+print(dict({"name":"ABC", "age":20}))              # {'name':'ABC', 'age':20}
+
+#  duplicate keys
+print(dict([("name", "ABC"), ("age", 20), ("age", 25)])) # {'name':'ABC', 'age':25}
+
+# Incorrect pair length gives ValueError
+# print(dict([("name", "ABC", "RRR")]))        # value error
+
+# Integer cannot directly convert into dict
+# print(dict(10))        # type error
 
 
 
