@@ -140,23 +140,46 @@
 
 
 """dict() rules"""
-# list to dict
-print(dict([("name", "ABC"), ("age", 20)]))        # {'name':'ABC', 'age':20}
+# # list to dict
+# print(dict([("name", "ABC"), ("age", 20)]))        # {'name':'ABC', 'age':20}
 
-#  tuple to dict
-print(dict((("name", "ABC"), ("age", 20))))        # {'name':'ABC', 'age':20}
+# #  tuple to dict
+# print(dict((("name", "ABC"), ("age", 20))))        # {'name':'ABC', 'age':20}
 
-# dict to dict
-print(dict({"name":"ABC", "age":20}))              # {'name':'ABC', 'age':20}
+# # dict to dict
+# print(dict({"name":"ABC", "age":20}))              # {'name':'ABC', 'age':20}
 
-#  duplicate keys
-print(dict([("name", "ABC"), ("age", 20), ("age", 25)])) # {'name':'ABC', 'age':25}
+# #  duplicate keys
+# print(dict([("name", "ABC"), ("age", 20), ("age", 25)])) # {'name':'ABC', 'age':25}
 
 # Incorrect pair length gives ValueError
 # print(dict([("name", "ABC", "RRR")]))        # value error
 
 # Integer cannot directly convert into dict
 # print(dict(10))        # type error
+
+
+"""Automatic Type Conversion in Arithmetic"""
+print(10 + 2.5)       # 12.5
+print(10 + 2)         # 12
+print(10.5 + 2.5)     # 13.0
+print(True + False)   # 1
+# print(10 + "2.5")     # type error
+print(10 + int(float("2.5")))# 12
+print("10" + "2")     # 102
+print("10" * 3)       # 101010
+print("10" + "2")     # 102
+print(3 * "HI")       # HIHIHI
+# print("HI" * 2.5)     # type error
+print(10 / 2)         # 5.0
+print(10 // 2)        # 5
+print(10 // 3)        # 3
+print(-10 // 3)       # -3.33 => -4
+print(10 % -3)        # -3.33 => -4 => -4 * -3 => 12 => 10 - 12 => -2
+print(10 % 3)         # 3.33 => 3 => 3 * 3 => 9 => 10-9 => 1
+print(2 ** 3)          # 8
+print(2 ** -2)         # 1 / 2 ** 2 => 1/ 4 => 0.25
+
 
 
 
