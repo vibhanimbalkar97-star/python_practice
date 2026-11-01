@@ -1,7 +1,8 @@
 5. NoneType — None
 
 Represents no value or an absent value.
-result = Noneprint(result is None)  # True
+result = None
+print(result is None)  # True
 
 
 
