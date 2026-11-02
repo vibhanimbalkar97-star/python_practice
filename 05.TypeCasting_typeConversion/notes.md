@@ -69,13 +69,8 @@ print(a)  # 100
 ```
 
 
-Js
-1. 15, 5
-2. 1, 0, true
-3.true, false
-4.nan, false, false
-5.valuerror, value error, "null"
-6.false, true, true, true
+
+
 
 
 
