@@ -1,0 +1,740 @@
+Let's practice 20 Python Conditional Statements interview questions from easy to hard.
+
+Try to predict the output without running the code. These questions cover `if`, `elif`, `else`, nested conditions, logical operators, truthy/falsy, short-circuiting, and tricky interview cases.
+
+## Python Conditional Quiz
+
+20/20
+
+Select one answer for each question. Answers and explanations will appear after submission.
+
+Q1. What is the output?
+
+Easy
+
+x = 10\
+if x > 5:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+A B
+
+Correct!
+
+10 > 5 is True.
+
+Q2. What is the output?
+
+Easy
+
+x = 0\
+if x:\
+&#x20;   print('True')\
+else:\
+&#x20;   print('False')
+
+True
+
+False
+
+Error
+
+Correct!
+
+0 is a falsy value.
+
+Q3. What is the output?
+
+Easy
+
+age = 18\
+if age > 18:\
+&#x20;   print('Adult')\
+else:\
+&#x20;   print('Not Adult')
+
+Adult
+
+Not Adult
+
+Error
+
+Correct!
+
+18 > 18 is False. The condition is strict greater-than.
+
+Q4. What is the output?
+
+Easy
+
+num = 7\
+if num % 2 == 0:\
+&#x20;   print('Even')\
+else:\
+&#x20;   print('Odd')
+
+Even
+
+Odd
+
+7
+
+Correct!
+
+7 % 2 gives 1, so the number is odd.
+
+Q5. What is the output?
+
+Easy
+
+if '':\
+&#x20;   print('A')\
+elif 'Python':\
+&#x20;   print('B')\
+else:\
+&#x20;   print('C')
+
+A
+
+B
+
+C
+
+Correct!
+
+Empty string is falsy, while a non-empty string is truthy.
+
+Q6. What is the output?
+
+Medium
+
+x = 15\
+if x > 10:\
+&#x20;   print('A')\
+if x > 20:\
+&#x20;   print('B')\
+else:\
+&#x20;   print('C')
+
+A
+
+A C
+
+A B
+
+Incorrect. Answer: A C
+
+The second if is separate. Its else belongs to it, so A and C print.
+
+Q7. What is the output?
+
+Medium
+
+marks = 85\
+if marks >= 90:\
+&#x20;   print('A')\
+elif marks >= 80:\
+&#x20;   print('B')\
+elif marks >= 70:\
+&#x20;   print('C')\
+else:\
+&#x20;   print('Fail')
+
+A
+
+B
+
+C
+
+Correct!
+
+85 >= 80 is True, so B prints and later conditions are skipped.
+
+Q8. What is the output?
+
+Medium
+
+x = 5\
+if x > 2 and x < 10:\
+&#x20;   print('Yes')\
+else:\
+&#x20;   print('No')
+
+Yes
+
+No
+
+Error
+
+Correct!
+
+Both conditions are True.
+
+Q9. What is the output?
+
+Medium
+
+x = 5\
+if x < 2 or x > 10:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+A B
+
+Correct!
+
+Both conditions are False, so else executes.
+
+Q10. What is the output?
+
+Medium
+
+x = 0\
+if not x:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+Error
+
+Incorrect. Answer: A
+
+0 is falsy. not 0 becomes True.
+
+Q11. What is the output?
+
+Medium
+
+x = 10\
+if x > 5:\
+&#x20;   if x > 15:\
+&#x20;       print('A')\
+&#x20;   else:\
+&#x20;       print('B')\
+else:\
+&#x20;   print('C')
+
+A
+
+B
+
+C
+
+Correct!
+
+Outer condition is True, inner condition is False, so inner else prints B.
+
+Q12. What is the output?
+
+Medium
+
+print(True or False and False)
+
+True
+
+False
+
+Error
+
+Correct!
+
+and has higher precedence than or: True or (False and False).
+
+Q13. What is the output?
+
+Medium
+
+x = 0\
+if x != 0 and 10 / x > 2:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+ZeroDivisionError
+
+Correct!
+
+Short-circuiting stops after x != 0 is False. Division does not happen.
+
+Q14. What is the output?
+
+Medium
+
+x = 8\
+print('Even' if x % 2 == 0 else 'Odd')
+
+Even
+
+Odd
+
+8
+
+Correct!
+
+8 % 2 is 0, so the condition is True.
+
+Q15. What is the output?
+
+Medium
+
+x = '0'\
+if x:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+Error
+
+Correct!
+
+'0' is a non-empty string, so it is truthy.
+
+Q16. What is the output?
+
+Hard
+
+x = 10\
+if x > 5:\
+&#x20;   print('A')\
+elif x > 8:\
+&#x20;   print('B')\
+else:\
+&#x20;   print('C')
+
+A
+
+B
+
+C
+
+Correct!
+
+The first condition is True. elif is skipped even though it is also True.
+
+Q17. What is the output?
+
+Hard
+
+x = 5\
+if x == 5:\
+&#x20;   pass\
+&#x20;   print('A')\
+print('B')
+
+A
+
+B
+
+A B
+
+Correct!
+
+pass does nothing. Both print statements execute.
+
+Q18. What is the output?
+
+Hard
+
+x = 3\
+if 1 < x < 5:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+Error
+
+Correct!
+
+Chained comparison means 1 < x and x < 5. Both are True.
+
+Q19. What is the output?
+
+Hard
+
+x = []\
+if x is None:\
+&#x20;   print('A')\
+elif not x:\
+&#x20;   print('B')\
+else:\
+&#x20;   print('C')
+
+A
+
+B
+
+C
+
+Incorrect. Answer: B
+
+An empty list is not None, but it is falsy. Therefore not x is True.
+
+Q20. What is the output?
+
+Hard
+
+x = 4\
+if x > 2:\
+&#x20;   if x < 5:\
+&#x20;       print('A')\
+&#x20;   print('B')\
+else:\
+&#x20;   print('C')
+
+A
+
+B
+
+A B
+
+C
+
+Correct!
+
+Both nested and outer conditions are True. The second print is inside the outer if but outside the inner if.
+
+# Your Score: 17/20
+
+Excellent! Your conditional logic is strong.
+
+
+Let's understand Q6, Q10, and Q19 step by step. These are important interview questions because they test `if-else` association, `not`, and truthy/falsy values.
+
+# Q6. Two separate `if` statements
+
+```
+x = 15if x > 10:    print('A')if x > 20:    print('B')else:    print('C')
+```
+
+Output:
+
+```
+A
+C
+```
+
+### Step-by-step execution
+
+Step 1
+
+First `if` condition
+
+`x > 10` → `15 > 10` → `True`
+
+So Python prints `A`.
+
+Step 2
+
+Second `if` condition
+
+`x > 20` → `15 > 20` → `False`
+
+So Python skips `B`.
+
+Step 3
+
+Its `else` executes
+
+Python prints `C`.
+
+### The important trick: Which `if` belongs to `else`?
+
+Look at the indentation.
+
+```
+if x > 10:    print('A')if x > 20:    print('B')else:    print('C')
+```
+
+The `else` belongs to the second `if`, because it is at the same indentation level as that `if`.
+
+Python does NOT connect the `else` to the first `if`.
+
+### Compare with `if-elif-else`
+
+```
+x = 15if x > 10:    print('A')elif x > 20:    print('B')else:    print('C')
+```
+
+Output:
+
+```
+A
+```
+
+Here, only one block executes.
+
+Interview trick:
+
+- Two separate `if` statements → both conditions are checked independently.
+- `if-elif-else` → only the first matching block executes.
+
+# Q10. How does `not` work?
+
+```
+x = 0if not x:    print('A')else:    print('B')
+```
+
+Output:
+
+```
+A
+```
+
+First, understand this:
+
+## `not` reverses the Boolean value
+
+| Expression     | Result  |
+| -------------- | ------- |
+| `not True`     | `False` |
+| `not False`    | `True`  |
+| `not 0`        | `True`  |
+| `not 1`        | `False` |
+| `not ""`       | `True`  |
+| `not "Python"` | `False` |
+| `not []`       | `True`  |
+| `not [1, 2]`   | `False` |
+
+### How Python evaluates `not x`
+
+Python first checks whether `x` is truthy or falsy.
+
+Then `not` reverses that result.
+
+## Logic Flow
+
+`x = 0`
+
+`0` is falsy → `bool(0)` is `False`
+
+`not False` → `True`
+
+`if` executes → prints A
+
+### Trick: Don't read `not x` as "x is not zero"
+
+Instead, read it as:
+
+> "Is x falsy?"
+
+Example:
+
+```
+x = 10if not x:    print("A")else:    print("B")
+```
+
+Output:
+
+```
+B
+```
+
+Why?
+
+- `10` is truthy.
+- `not 10` → `False`.
+- So `else` executes.
+
+### Important difference
+
+```
+x = 0print(not x)print(x == 0)print(x != 0)
+```
+
+Output:
+
+```
+True
+True
+False
+```
+
+| Expression | Meaning                 |
+| ---------- | ----------------------- |
+| `not x`    | Is x falsy?             |
+| `x == 0`   | Is x equal to zero?     |
+| `x != 0`   | Is x not equal to zero? |
+
+`not x` is not the same as `x != 0`.
+
+For example:
+
+```
+x = ""print(not x)      # Trueprint(x != 0)     # True
+```
+
+Here both happen to be True, but for different reasons.
+
+# Q19. Empty list vs None
+
+```
+x = []if x is None:    print('A')elif not x:    print('B')else:    print('C')
+```
+
+Output:
+
+```
+B
+```
+
+This is a very important Python interview trick.
+
+### Step 1: Understand `None`
+
+`None` means there is no value.
+
+```
+x = Noneprint(x is None)  # True
+```
+
+### Step 2: Understand an empty list
+
+```
+x = []print(x is None)  # Falseprint(bool(x))    # False
+```
+
+An empty list is not `None`, but it is falsy.
+
+### Step 3: Evaluate the conditions
+
+`x = []`
+
+Condition 1
+
+`x is None` → `False`
+
+Skipped
+
+Condition 2
+
+`not x` → `not []` → `not False` → `True`
+
+Executes B
+
+`else` is skipped
+
+### The difference you must remember
+
+| Value  | `x is None` | `bool(x)` | `not x` |
+| ------ | ----------- | --------- | ------- |
+| `None` | True        | False     | True    |
+| `[]`   | False       | False     | True    |
+| `[1]`  | False       | True      | False   |
+| `0`    | False       | False     | True    |
+| `""`   | False       | False     | True    |
+
+Trick: `None` and empty values are different.
+
+- `None` → no value
+- → list exists, but it contains no elements
+- `""` → string exists, but it contains no characters
+- `0` → numeric zero
+
+All are falsy except the important distinction that `is None` checks specifically for `None`.
+
+# Quick Practice: How `not` works
+
+Try these 5 questions. Don't run the code yet.
+
+`not` Practice
+
+0/5
+
+1\. What is the output?
+
+x = 5\
+print(not x)
+
+True
+
+False
+
+5
+
+
+
+2\. What is the output?
+
+x = []\
+if not x:\
+&#x20;   print('Empty')\
+else:\
+&#x20;   print('Not Empty')
+
+Empty
+
+Not Empty
+
+Error
+
+
+
+3\. What is the output?
+
+x = '0'\
+print(not x)
+
+True
+
+False
+
+0
+
+
+
+4\. What is the output?
+
+x = None\
+print(not x)
+
+True
+
+False
+
+None
+
+
+
+5\. What is the output?
+
+x = 0\
+if not x == 0:\
+&#x20;   print('A')\
+else:\
+&#x20;   print('B')
+
+A
+
+B
+
+Error
+
+
+
+Check answers
