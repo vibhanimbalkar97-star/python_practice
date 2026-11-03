@@ -180,7 +180,7 @@ print(10 % 3)         # 3.33 => 3 => 3 * 3 => 9 => 10-9 => 1
 print(2 ** 3)          # 8
 print(2 ** -2)         # 1 / 2 ** 2 => 1/ 4 => 0.25
 
-true, true, false, 11, 10, 9, -9, 555, 15, true, false, true, "None", string, true, 11, 10.5
+
 
 
 
