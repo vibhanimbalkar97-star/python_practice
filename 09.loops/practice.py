@@ -94,19 +94,19 @@ inner loops starts again from its initial value for each iteration
 - Outer loop controls rows.
 - Inner loop controls stars in each row."""
 
-# for i in range(1,4):
-#     for j in range(1, 3):
-#         # print(i,j)
-#         print("*", end="")
-#     print()
-    # print(f"outer: {i,j}")
-# print(f"outer: {i,j}")
+for i in range(1,4):
+    for j in range(1, 3):
+        # print(i,j)
+        print("*", end="")
+    print()
+    print(f"outer: {i,j}")
+print(f"outer: {i,j}")
 
 for i in range(1,4):
     for j in range(i):
         print("*", end="")
     print()
 
-# n = [1,2,3,4,5]
-# for num in n:
-#     print(num)
+n = [1,2,3,4,5]
+for num in n:
+    print(num)
